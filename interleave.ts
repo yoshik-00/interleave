@@ -113,8 +113,9 @@ class BalancedInterleaving {
       // 次に追加するアルゴリズム
       const nextIsOld = startWithOld
         ? oldIndex < oldRanked.length
-        : newIndex >= newRanked.length ||
-          (oldIndex < oldRanked.length && Math.random() < 0.5);
+        : newIndex >= newRanked.length;
+        //以下、L105と重複しているため不要
+        /*|| (oldIndex < oldRanked.length && Math.random() < 0.5)*/
 
       if (nextIsOld) {
         // 旧アルゴリズムから未追加の募集を取得
